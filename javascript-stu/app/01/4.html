@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>点击变红色</title>
+    <style>
+        body,
+        div{
+            font:12px/1.5 Tahoma;
+            padding: 0;
+            margin: 0;
+        }
+        button{
+            font-family: initial;
+        }
+        #outer{
+            width: 330px;
+            height: 100px;
+            margin: 10px auto;
+            text-align: center;
+        }
+        #outer div{
+            width: 100px;
+            height: 100px;
+            background-color: #333;
+            display: inline-block;
+            margin-right: 5px;
+        }
+    </style>
+        
+    <script>
+        window.onload = function(){
+            var oDIv = document.getElementById('outer');
+            var oBtn = oDIv.getElementsByTagName('button')[0];
+            var aDiv = oDIv.getElementsByTagName('div');
+
+            oBtn.onclick = function(){
+                for(var i = 0;i<aDiv.length;i++){
+                    aDiv[i].style.backgroundColor = 'red';
+                }
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <div id="outer">
+        <p><button type="">点击我变红色</button></p>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+</body>
+
+</html>

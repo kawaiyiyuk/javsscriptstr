@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>鼠标移入变色</title>
+    <style>
+        body{
+            font: 12px/1.5 Tahoma;
+            margin: 0 auto;
+        }
+        #outer{
+            margin: 10px auto;
+            width: 200px;
+            height: 200px;
+        }
+        .red{
+            background-color: #ccc;
+            border: 10px solid red;
+            color: red;
+        }
+        .black{
+            background-color: black;
+            border: 10px solid black;
+            color: #fff;
+        }
+
+    </style>
+        
+    <script>
+        window.onload = function(){
+            var oDiv = document.getElementById('outer');
+            oDiv.onmouseover = function(){
+                oDiv.className = 'red';
+            }
+            oDiv.onmouseout = function(){
+                oDiv.className = 'black';
+            }
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <div id="outer" class="black">
+        鼠标移入改变颜色,移出恢复
+    </div>
+
+</body>
+
+</html>

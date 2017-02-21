@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>传参并弹出</title>
+    <style>
+        body {
+            font: 12px/1.5 Tahoma;
+            text-align: center;
+        }
+        
+        code,
+        input,
+        button {
+            font-family: initial;
+        }
+        
+        input {
+            border: 1px solid #ccc;
+            padding: 3px;
+        }
+        
+        button {
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        var fn = function(a,b){
+            console.log(a.value);
+            console.log(b.value);
+        }
+        window.onload = function(){
+            var aBtn = document.getElementsByTagName('button')[0];
+            var aInput = document.getElementsByTagName('input');
+            aBtn.onclick = function(){
+                fn(aInput[0],aInput[1])
+            }
+
+            /*  可以每个按钮弹每个输入框的值
+            var aBtn = document.getElementsByTagName('button');
+            var aInput = document.getElementsByTagName('input');
+            for(var i = 0; i<aBtn.length; i++){
+                aBtn[i].index = i;
+                aBtn[i].onclick = function(){
+                    console.log(aInput[this.index].value);
+                }
+            }
+            */
+
+        }
+    </script>
+</head>
+
+<body>
+    <p>
+        <input type="text" name="" value="北京市">
+    </p>
+    <p>
+        <input type="text" name="" value="朝阳区">
+    </p>
+    <button>传参</button>
+
+
+</body>
+
+</html>

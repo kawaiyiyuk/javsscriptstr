@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ceshi</title>
+</head>
+<body>
+    <script>
+        window.onload = function(){
+            var aLi = document.getElementById('ul').getElementsByTagName('li');
+            for( var p in aLi) console.log(aLi[p].title)
+        }
+    </script>
+    <ul id="ul">
+        <li class="123" title="111">111</li>
+        <li calss="">222</li>
+        <li>333</li>
+    </ul>
+</body>
+</html>
